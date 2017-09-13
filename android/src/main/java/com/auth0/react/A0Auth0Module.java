@@ -64,7 +64,7 @@ public class A0Auth0Module extends ReactContextBaseJavaModule implements Lifecyc
             final Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             intent.setData(Uri.parse(url));
-            getReactApplicationContext().startActivity(intent);
+            getReactApplicationContext().startActivityForResult(intent, 666, new Bundle());;
         }
     }
 
